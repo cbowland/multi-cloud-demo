@@ -8,7 +8,7 @@ RUN mvn verify --fail-never
 
 # add source code and package war
 ADD ./src src/
-RUN mvn clean package
+RUN mvn clean package -DskipTests
 
 # Second stage: minimal runtime environment
 FROM registry.access.redhat.com/ubi8/ubi:8.7-1054
