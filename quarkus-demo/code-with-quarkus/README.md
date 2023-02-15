@@ -42,6 +42,10 @@ Or, if you don't have GraalVM installed, you can run the native executable build
 ```shell script
 ./mvnw package -Pnative -Dquarkus.native.container-build=true
 ```
+If you are using Podman and not Docker, use this script
+```shell script
+/mvnw package -Pnative -Dquarkus.native.container-build=true -Dquarkus.native.container-runtime=podman
+```
 
 You can then execute your native executable with: `./target/code-with-quarkus-1.0.0-SNAPSHOT-runner`
 
